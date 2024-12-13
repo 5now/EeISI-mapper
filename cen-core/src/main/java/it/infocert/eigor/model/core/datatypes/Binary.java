@@ -1,6 +1,6 @@
 package it.infocert.eigor.model.core.datatypes;
 
-import javax.activation.MimeType;
+import jakarta.activation.MimeType;
 
 /**
  * A set of finite-length sequences of binary digits.

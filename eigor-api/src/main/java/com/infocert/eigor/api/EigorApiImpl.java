@@ -1,6 +1,7 @@
 package com.infocert.eigor.api;
 
 import com.google.common.collect.Lists;
+import com.sun.istack.NotNull;
 import it.infocert.eigor.api.*;
 import it.infocert.eigor.api.conversion.*;
 import it.infocert.eigor.api.errors.ErrorCode;
@@ -10,7 +11,6 @@ import it.infocert.eigor.api.xml.XSDValidator;
 import it.infocert.eigor.converter.cen2xmlcen.DumpIntermediateCenInvoiceAsCenXmlCallback;
 import it.infocert.eigor.org.springframework.core.io.FileSystemResource;
 import org.apache.commons.io.IOUtils;
-import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;

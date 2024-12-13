@@ -3,7 +3,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
+        <version>3.3.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -52,13 +52,20 @@
         <module>converter-cen-peppol</module>
         <module>converter-cen-peppolcn</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+    </dependencies>
 
     <reporting>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.7.0</version>
                 <reportSets>
                     <reportSet>
                         <id>info-reports</id>

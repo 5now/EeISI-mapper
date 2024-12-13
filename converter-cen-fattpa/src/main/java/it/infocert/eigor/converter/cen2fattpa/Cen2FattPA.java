@@ -23,7 +23,7 @@ import org.jdom2.Namespace;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.xml.bind.*;
+import jakarta.xml.bind.*;
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 import java.util.*;

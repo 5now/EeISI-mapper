@@ -1,6 +1,6 @@
 package it.infocert.eigor.model.core.enums;
 
-import javax.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 
 public enum VatExemptionReasonsCodes {
 

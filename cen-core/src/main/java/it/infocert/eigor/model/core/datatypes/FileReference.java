@@ -1,6 +1,6 @@
 package it.infocert.eigor.model.core.datatypes;
 
-import javax.activation.MimeType;
+import jakarta.activation.MimeType;
 
 public class FileReference {
     private final String filePath;

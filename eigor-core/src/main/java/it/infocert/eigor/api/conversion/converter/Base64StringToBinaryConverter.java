@@ -3,8 +3,8 @@ package it.infocert.eigor.api.conversion.converter;
 import it.infocert.eigor.model.core.datatypes.Binary;
 import org.codehaus.plexus.util.Base64;
 
-import javax.activation.MimeType;
-import javax.activation.MimeTypeParseException;
+import jakarta.activation.MimeType;
+import jakarta.activation.MimeTypeParseException;
 
 public class Base64StringToBinaryConverter implements TypeConverter<String, Binary> {
 

@@ -2,7 +2,7 @@ package it.infocert.eigor.model.core.datatypes;
 
 import org.junit.Test;
 
-import javax.activation.MimeType;
+import jakarta.activation.MimeType;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

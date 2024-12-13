@@ -7,7 +7,7 @@
     <groupId>it.infocert.eigor</groupId>
     <artifactId>eigor-parent</artifactId>
     <packaging>pom</packaging>
-    <version>4.5.0</version>
+    <version>4.4.4-SNAPSHOT</version>
     <name>Eigor :: Parent (${project.artifactId})</name>
     <description>Electronic Invoice GO Regional</description>
     <organization>
@@ -21,34 +21,35 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dependency.locations.enabled>false</dependency.locations.enabled>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
         <!-- java -->
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
 
         <!-- dependencies -->
         <powermock.version>1.6.6</powermock.version>
         <juel-api.version>2.2.7</juel-api.version>
         <joda-time.version>2.9.9</joda-time.version>
         <commons-csv.version>1.4</commons-csv.version>
-        <logback.version>1.2.3</logback.version>
-        <slf4j-api.version>1.7.25</slf4j-api.version>
-        <commons-io.version>1.3.2</commons-io.version>
-        <guava.version>20.0</guava.version>
+        <logback.version>1.5.5</logback.version>
+        <slf4j-api.version>2.0.7</slf4j-api.version>
+        <guava.version>31.1-jre</guava.version>
         <jopt-simple.version>5.0.3</jopt-simple.version>
         <pitest-maven.version>1.1.11</pitest-maven.version>
         <commons-compress.version>1.9</commons-compress.version>
-        <phschematron.version>5.0.6</phschematron.version>
+        <phschematron.version>5.6.5</phschematron.version>
         <plexus-utils.version>3.0.24</plexus-utils.version>
         <jdom.version>2.0.6</jdom.version>
         <jaxen.version>1.1.6</jaxen.version>
         <commons-io.version>2.5</commons-io.version>
         <junit.version>4.12</junit.version>
         <reflections.version>0.9.11</reflections.version>
-        <jetbrains-annotations.version>13.0</jetbrains-annotations.version>
+        <jetbrains-annotations.version>25.0.0</jetbrains-annotations.version>
 
         <!-- plugins -->
-        <maven-failsafe-plugin.version>2.20</maven-failsafe-plugin.version>
-        <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
         <template-generator-maven-plugin.version>0.0.7</template-generator-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
         <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
@@ -130,13 +131,11 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
                 <version>${logback.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -162,11 +161,6 @@
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>${slf4j-api.version}</version>
             </dependency>
 
             <!-- JUEL -->
@@ -329,6 +323,20 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.28.0-GA</version> <!-- Update to the latest version -->
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.doxia</groupId>
+                <artifactId>doxia-sink-api</artifactId>
+                <version>2.0.0</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -338,23 +346,36 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>1.5.2.RELEASE</version>
+            <version>3.3.0</version>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-core</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.google.code.findbugs</groupId>-->
+<!--            <artifactId>annotations</artifactId>-->
+<!--            <version>2.0.3</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-annotations</artifactId>
+            <version>4.8.6</version>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>2.1.3</version> <!-- Check for the latest version -->
         </dependency>
         <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>annotations</artifactId>
-            <version>2.0.3</version>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.2</version> <!-- Use the latest version -->
         </dependency>
     </dependencies>
 
@@ -494,7 +515,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.7.0</version>
             </plugin>
         </plugins>
     </build>
@@ -503,7 +524,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
+                <version>3.7.0</version>
 
                 <reportSets>
                     <reportSet>

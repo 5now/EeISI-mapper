@@ -7,7 +7,7 @@ import it.infocert.eigor.fattpa.commons.models.FatturaElettronicaBodyType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.activation.MimeType;
+import jakarta.activation.MimeType;
 import java.util.List;
 import java.util.function.Predicate;
 
