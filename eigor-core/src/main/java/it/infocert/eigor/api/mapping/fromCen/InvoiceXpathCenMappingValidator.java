@@ -11,7 +11,7 @@ import it.infocert.eigor.model.core.model.BTBG;
 import java.util.regex.Pattern;
 
 /**
- * Validator for Map<CEN,XPATH>
+ * Validator for Map&lt;CEN,XPATH&gt;
  */
 public class InvoiceXpathCenMappingValidator implements InvoiceMappingValidator {
 

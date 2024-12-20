@@ -5,7 +5,7 @@
     <parent>
         <artifactId>eigor-parent</artifactId>
         <groupId>it.infocert.eigor</groupId>
-        <version>4.5.0</version>
+        <version>4.4.4-SNAPSHOT</version>
         <relativePath>../eigor-parent</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -40,7 +40,7 @@
                     <plugin>
                         <groupId>com.helger.maven</groupId>
                         <artifactId>ph-sch2xslt-maven-plugin</artifactId>
-                        <version>${phschematron.version}</version>
+                        <version>5.3.0</version>
                         <executions>
                             <execution>
                                 <id>cii-cius-xslt-generation</id>

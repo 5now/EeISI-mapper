@@ -14,7 +14,7 @@ import javax.xml.xpath.XPathFactory;
 import java.util.regex.Pattern;
 
 /**
- * Validator for Map<CEN,XPATH>
+ * Validator for Map&lt;CEN,XPATH&gt;
  */
 public class InvoiceCenXpathMappingValidator implements InvoiceMappingValidator {
 

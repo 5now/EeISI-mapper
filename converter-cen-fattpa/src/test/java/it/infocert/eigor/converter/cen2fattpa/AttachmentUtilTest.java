@@ -5,7 +5,7 @@ import it.infocert.eigor.fattpa.commons.models.FatturaElettronicaBodyType;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.activation.MimeType;
+import jakarta.activation.MimeType;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 

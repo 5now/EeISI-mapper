@@ -1,9 +1,10 @@
 package com.infocert.eigor.api;
 
+import com.sun.istack.NotNull;
 import it.infocert.eigor.api.ConversionResult;
 import it.infocert.eigor.api.EigorException;
 import it.infocert.eigor.api.conversion.ConversionCallback;
-import org.jetbrains.annotations.NotNull;
+
 
 import java.io.File;
 import java.io.InputStream;

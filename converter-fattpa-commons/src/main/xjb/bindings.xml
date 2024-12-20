@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jxb:bindings version="2.1"
-              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+<jxb:bindings version="3.0"
+              xmlns:jxb="https://jakarta.ee/xml/ns/jaxb"
               xmlns:xs="http://www.w3.org/2001/XMLSchema"
               xmlns:fpa="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2"
               schemaLocation="../../../../converter-commons/src/main/resources/converterdata/converter-commons/fattpa/xsdstatic/Schema_del_file_xml_FatturaPA_versione_1.2.xsd">

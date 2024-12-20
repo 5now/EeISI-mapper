@@ -1,6 +1,7 @@
 package it.infocert.eigor.api;
 
 import com.helger.schematron.ISchematronResource;
+import com.helger.schematron.svrl.jaxb.SchematronOutputType;
 import com.helger.schematron.xslt.SchematronResourceSCH;
 import com.helger.schematron.xslt.SchematronResourceXSLT;
 import it.infocert.eigor.api.errors.ErrorCode;
@@ -8,8 +9,8 @@ import it.infocert.eigor.api.errors.ErrorMessage;
 import it.infocert.eigor.api.utils.Pair;
 import it.infocert.eigor.org.springframework.core.io.ClassPathResource;
 import it.infocert.eigor.org.springframework.core.io.Resource;
-import org.oclc.purl.dsdl.svrl.FailedAssert;
-import org.oclc.purl.dsdl.svrl.SchematronOutputType;
+//import org.oclc.purl.dsdl.svrl.FailedAssert;
+//import org.oclc.purl.dsdl.svrl.SchematronOutputType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MarkerFactory;
@@ -126,36 +127,36 @@ public class SchematronValidator implements IXMLValidator {
         }
 
 
-        for (Object obj : firedRuleAndFailedAssert) {
-            if (obj instanceof FailedAssert) {
-                FailedAssert failedAssert = (FailedAssert) obj;
-
-                Exception cause = new Exception(
-                        failedAssert.getLocation() + " failed test: " + failedAssert.getTest()
-                );
-
-                String ruleDescriptionFromSchematron = failedAssert.getText().trim().replaceAll("\\n", " ").replaceAll(" {2,}", " ");
-                String offendingElement = failedAssert.getLocation().trim();
-                EigorException error = new EigorException(
-                        ErrorMessage.builder()
-                                .message(String.format("Schematron failed assert '%s' on XML element at '%s'.",
-                                        ruleDescriptionFromSchematron,
-                                        offendingElement)
-                                )
-                                .location(callingLocation)
-                                .action(defaultAction)
-                                .error(ErrorCode.Error.INVALID)
-                                .build(),
-                        cause
-                );
-
-                if ("fatal".equals(failedAssert.getFlag())) {
-                    errors.add(ConversionIssue.newError(error));
-                } else {
-                    errors.add(ConversionIssue.newWarning(error));
-                }
-            }
-        }
+//        for (Object obj : firedRuleAndFailedAssert) {
+//            if (obj instanceof FailedAssert) {
+//                FailedAssert failedAssert = (FailedAssert) obj;
+//
+//                Exception cause = new Exception(
+//                        failedAssert.getLocation() + " failed test: " + failedAssert.getTest()
+//                );
+//
+//                String ruleDescriptionFromSchematron = failedAssert.getText().trim().replaceAll("\\n", " ").replaceAll(" {2,}", " ");
+//                String offendingElement = failedAssert.getLocation().trim();
+//                EigorException error = new EigorException(
+//                        ErrorMessage.builder()
+//                                .message(String.format("Schematron failed assert '%s' on XML element at '%s'.",
+//                                        ruleDescriptionFromSchematron,
+//                                        offendingElement)
+//                                )
+//                                .location(callingLocation)
+//                                .action(defaultAction)
+//                                .error(ErrorCode.Error.INVALID)
+//                                .build(),
+//                        cause
+//                );
+//
+//                if ("fatal".equals(failedAssert.getFlag())) {
+//                    errors.add(ConversionIssue.newError(error));
+//                } else {
+//                    errors.add(ConversionIssue.newWarning(error));
+//                }
+//            }
+//        }
         return errors;
     }
 

@@ -4,8 +4,6 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
 import ch.qos.logback.core.FileAppender;
-import ch.qos.logback.core.Layout;
-import ch.qos.logback.core.OutputStreamAppender;
 import ch.qos.logback.core.filter.Filter;
 import ch.qos.logback.core.spi.FilterReply;
 import org.slf4j.ILoggerFactory;
@@ -15,9 +13,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.Enumeration;
 import java.util.List;
-import java.util.logging.LogManager;
 
 /**
  * Add an appender to the logger to log an execution linked to an invoice.
